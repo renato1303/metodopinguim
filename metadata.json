@@ -1,0 +1,6 @@
+{
+  "name": "Método Pinguim",
+  "description": "Método educativo completo para ajudar pais e responsáveis a protegerem crianças e adolescentes do uso excessivo de telas, redes sociais, jogos online e conteúdos inadequados da internet.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
