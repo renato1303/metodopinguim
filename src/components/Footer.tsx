@@ -40,7 +40,7 @@ export default function Footer({ onNavigate, onOpenAdmin }: FooterProps) {
             {/* Social Icons row */}
             <div className="flex items-center space-x-3 pt-2">
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/metodopinguim"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-8 h-8 rounded-full bg-white/5 border border-white/10 hover:border-[#FFD166] flex items-center justify-center text-white hover:text-[#FFD166] transition-colors"
@@ -49,7 +49,7 @@ export default function Footer({ onNavigate, onOpenAdmin }: FooterProps) {
                 <Instagram className="w-4 h-4 shrink-0" />
               </a>
               <a
-                href="https://facebook.com"
+                href="https://facebook.com/metodopinguim"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-8 h-8 rounded-full bg-white/5 border border-white/10 hover:border-[#FFD166] flex items-center justify-center text-white hover:text-[#FFD166] transition-colors"

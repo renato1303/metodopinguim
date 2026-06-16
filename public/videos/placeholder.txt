@@ -1,7 +1,0 @@
-Coloque os seus vídeos de depoimentos (.mp4) nesta pasta com os seguintes nomes para que rodem limpos e automaticamente na seção de depoimentos:
-- depoimento1.mp4 (para o Depoimento 1)
-- depoimento2.mp4 (para o Depoimento 2)
-- depoimento3.mp4 (para o Depoimento 3)
-- depoimento4.mp4 (para o Depoimento 4)
-
-Eles serão servidos de forma limpa e com excelente performance utilizando o player de vídeo nativo!
