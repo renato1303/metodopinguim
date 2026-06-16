@@ -13,7 +13,7 @@ export const PILLARS: Pillar[] = [
     title: 'Limites Saudáveis',
     description: 'Criar regras claras e acordos de convivência doméstica que regulem o tempo de tela de maneira pacífica e inquestionável.',
     longDescription: 'Ir além do clássico "desliga esse celular". Desenvolvemos rotinas estruturadas, regras claras de desligamento noturno e técnicas de transição de tela que reduzem conflitos domésticos em até 90%. Transformamos limites em hábitos saudáveis autônomos.',
-    imageUrl: '/src/assets/images/pillar_limits_1781138175078.png'
+    imageUrl: '/src/assets/images/imagemrest.png'
   },
   {
     id: 3,
@@ -66,7 +66,7 @@ export const AGE_CATEGORIES: AgeCategory[] = [
     range: '6 a 9 anos',
     title: 'Anos Formativos',
     emoji: '✏️',
-    imageUrl: '/src/assets/images/child_6_9_years_1781136369648.png',
+    imageUrl: '/src/assets/images/meninoneg.png',
     risks: [
       'Exposição acidental a conteúdos adultos, violentos ou pornográficos.',
       'Início da dependência de jogos online hipnotizantes baseados em recompensas constantes.',
@@ -110,7 +110,7 @@ export const AGE_CATEGORIES: AgeCategory[] = [
     range: '14 a 17 anos',
     title: 'Adolescência',
     emoji: '🚀',
-    imageUrl: '/src/assets/images/teen_17_years_single_1781137752740.png',
+    imageUrl: '/src/assets/images/meninaasiatica.png',
     risks: [
       'Alimentação de algoritmos de scroll infinito provocando severas crises de dopamina e insônia.',
       'Assédio por parte de adultos ou circulação de fotos íntimas autogeradas (sextortion).',
