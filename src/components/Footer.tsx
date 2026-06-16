@@ -1,4 +1,4 @@
-import { Instagram, Youtube, Linkedin, Shield, Heart, Lock } from 'lucide-react';
+import { Instagram, Facebook, Shield, Heart, Lock } from 'lucide-react';
 
 interface FooterProps {
   onNavigate: (sectionId: string) => void;
@@ -49,32 +49,13 @@ export default function Footer({ onNavigate, onOpenAdmin }: FooterProps) {
                 <Instagram className="w-4 h-4 shrink-0" />
               </a>
               <a
-                href="https://youtube.com"
+                href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-8 h-8 rounded-full bg-white/5 border border-white/10 hover:border-[#FFD166] flex items-center justify-center text-white hover:text-[#FFD166] transition-colors"
-                aria-label="YouTube"
+                aria-label="Facebook"
               >
-                <Youtube className="w-4 h-4 shrink-0" />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-white/5 border border-white/10 hover:border-[#FFD166] flex items-center justify-center text-white hover:text-[#FFD166] transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-4 h-4 shrink-0" />
-              </a>
-              {/* Simulate simple custom TikTok label */}
-              <a
-                href="https://tiktok.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-white/5 border border-white/10 hover:border-[#FFD166] flex items-center justify-center text-white hover:text-[#FFD166] transition-colors"
-                aria-label="TikTok"
-              >
-                <span className="text-xs font-mono font-black">🎵</span>
+                <Facebook className="w-4 h-4 shrink-0" />
               </a>
             </div>
           </div>
