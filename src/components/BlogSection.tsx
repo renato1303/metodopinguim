@@ -278,7 +278,7 @@ export default function BlogSection({ onOpenBook }: BlogSectionProps) {
                 Receba conselhos e alertas semanais
               </h3>
               <p className="text-xs text-gray-250 font-sans font-light leading-relaxed mb-6">
-                Assine nossa newsletter semanal. Junte-se a mais de 50.000 pais conscientes e fique sabendo antes sobre os novos riscos de jogos e aplicativos!
+                Assine nossa newsletter semanal. Junte-se a centenas de pais conscientes e fique sabendo antes sobre os novos riscos de jogos e aplicativos!
               </p>
 
               {!newsSuccess ? (

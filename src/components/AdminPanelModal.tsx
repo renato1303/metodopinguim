@@ -39,8 +39,8 @@ export default function AdminPanelModal({ isOpen, onClose, config, onSave }: Adm
 
   const handleReset = () => {
     setEnabled(true);
-    setText("Conheça o livro 'Salvando Meu Filho das Telas!': o guia completo para proteger crianças dos perigos das telas");
-    setLinkText('Saiba Mais');
+    setText('Conheça o livro "Salvando Meu Filho das Telas!"');
+    setLinkText('Saiba mais');
     setBgColor('#FFD166');
     setTextColor('#0D3B66');
   };

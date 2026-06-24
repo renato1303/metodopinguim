@@ -48,7 +48,7 @@ export default function Hero({ onNavigate }: HeroProps) {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-base sm:text-lg lg:text-xl text-gray-200 font-sans font-light max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed"
             >
-              O Método Pinguim ajuda famílias brasileiras a criarem hábitos digitais saudáveis e a protegerem crianças e adolescentes dos perigos ocultos da internet.
+              O Método Pinguim ajuda famílias a reconstruírem a conexão entre pais e filhos, fortalecendo rotinas, limites saudáveis e momentos de convivência que transformam o lar.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -85,15 +85,15 @@ export default function Hero({ onNavigate }: HeroProps) {
               className="grid grid-cols-3 gap-4 border-t border-white/10 pt-8 max-w-lg mx-auto lg:mx-0"
             >
               <div className="text-center lg:text-left">
-                <span className="block text-2xl sm:text-3xl font-extrabold text-[#4EA8DE]">+50.000</span>
+                <span className="block text-2xl sm:text-3xl font-extrabold text-[#4EA8DE]">+300</span>
                 <span className="text-xs sm:text-sm text-gray-300 font-sans font-light">Famílias impactadas</span>
               </div>
               <div className="text-center lg:text-left">
-                <span className="block text-2xl sm:text-3xl font-extrabold text-[#FFD166]">+500</span>
+                <span className="block text-2xl sm:text-3xl font-extrabold text-[#FFD166]">+120</span>
                 <span className="text-xs sm:text-sm text-gray-300 font-sans font-light">Mídias educativas</span>
               </div>
               <div className="text-center lg:text-left">
-                <span className="block text-2xl sm:text-3xl font-extrabold text-[#4EA8DE]">+100</span>
+                <span className="block text-2xl sm:text-3xl font-extrabold text-[#4EA8DE]">+30</span>
                 <span className="text-xs sm:text-sm text-gray-300 font-sans font-light">Escolas atendidas</span>
               </div>
             </motion.div>

@@ -30,15 +30,20 @@ export default function App() {
     const saved = localStorage.getItem('metodo_pinguim_announcement_config');
     if (saved) {
       try {
-        return JSON.parse(saved);
+        const parsed = JSON.parse(saved);
+        if (parsed && parsed.text && parsed.text.includes("o guia completo para proteger crianças")) {
+          localStorage.removeItem('metodo_pinguim_announcement_config');
+        } else {
+          return parsed;
+        }
       } catch (e) {
         // Fallback safely to original specifications
       }
     }
     return {
       enabled: true,
-      text: "Conheça o livro 'Salvando Meu Filho das Telas!': o guia completo para proteger crianças dos perigos das telas",
-      linkText: 'Saiba Mais',
+      text: 'Conheça o livro "Salvando Meu Filho das Telas!"',
+      linkText: 'Saiba mais',
       bgColor: '#FFD166',
       textColor: '#0D3B66'
     };

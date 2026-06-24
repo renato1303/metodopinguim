@@ -168,7 +168,7 @@ export default function AboutFounder() {
                   Comecei a estudar o design de comportamento e o funcionamento das dinâmicas familiares. Entendi que o excesso de telas raramente é o problema principal, mas o reflexo de rotinas fragilizadas e falta de limites claros. Pais exaustos não têm culpa, mas precisam de um plano de ação prático e restaurador.
                 </p>
                 <p>
-                  Minha missão se tornou clara: simplificar as melhores táticas de regulação doméstica, psicopedagogia prática e rotina em um guia intuitivo e acessível para qualquer família. O método foi inicialmente testado em dez famílias de amigos próximos, depois em escolas locais, e logo se transformou em um movimento que conta hoje com mais de 50 mil lares transformados.
+                  Minha missão se tornou clara: simplificar as melhores táticas de regulação doméstica, psicopedagogia prática e rotina em um guia intuitivo e acessível para qualquer família. O método foi inicialmente testado em dez famílias de amigos próximos, depois em escolas locais, e logo se transformou em um movimento que conta hoje com mais de 300 lares transformados.
                 </p>
                 <p>
                   Os pinguins protegem seus ovos contra frios congelantes sob forças cooperativas indestrutíveis. Acreditamos que a infância e os laços familiares são os bens mais preciosos que temos. Ao restabelecer a rotina e o afeto real, devolvemos às crianças o direito de viver uma infância de verdade e aos pais a alegria de liderar o próprio lar com amor e propósito.
