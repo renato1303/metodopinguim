@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ChevronLeft, ChevronRight, Star, Heart, Quote, Play } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Star, Heart, Quote, Play, Volume2, VolumeX } from 'lucide-react';
 
 const MIXED_TESTIMONIALS = [
   {
@@ -84,42 +84,91 @@ interface TestimonialVideoProps {
 }
 
 function TestimonialVideo({ videoId, videoPath, name }: TestimonialVideoProps) {
+  const [isPlaying, setIsPlaying] = useState(false);
   const [useFallback, setUseFallback] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
-  // If the active testimonial changes, reset fallbacks to automatically probe
+  // Reset play and fallback state when the active video change
   useEffect(() => {
+    setIsPlaying(false);
     setUseFallback(false);
   }, [videoPath]);
 
-  if (!useFallback) {
-    return (
-      <video
-        key={videoPath}
-        src={videoPath}
-        title={name}
-        className="absolute inset-0 w-full h-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-        controls={false}
-        onError={() => {
-          console.warn(`Local video not found at ${videoPath}, falling back to YouTube.`);
-          setUseFallback(true);
-        }}
-      />
-    );
-  }
+  const handlePlayClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setIsPlaying(true);
+    
+    if (!useFallback && videoRef.current) {
+      videoRef.current.muted = false;
+      videoRef.current.play().catch((err) => {
+        console.warn("HTML5 video playback initiation was blocked:", err);
+      });
+    }
+  };
 
   return (
-    <div className="absolute inset-y-0 -inset-x-[20%] scale-[1.38] origin-center -translate-y-[6%]">
-      <iframe
-        src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&iv_load_policy=3&playsinline=1&loop=1&playlist=${videoId}`}
-        title={name}
-        className="absolute inset-0 w-full h-full border-0 pointer-events-none"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-      />
+    <div 
+      className="absolute inset-0 w-full h-full cursor-pointer select-none overflow-hidden group"
+      onClick={handlePlayClick}
+    >
+      {!isPlaying ? (
+        // Beautiful, high-fidelity placeholder cover poster with a glowing Play button
+        <div className="absolute inset-0 w-full h-full bg-slate-950 flex flex-col items-center justify-center relative">
+          {/* YouTube High Quality Thumbnail as background poster */}
+          <img 
+            src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`} 
+            alt={name}
+            className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500"
+            referrerPolicy="no-referrer"
+          />
+          {/* Rich cinematic overlay gradient */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/30" />
+
+          {/* Action Call Text */}
+          <div className="absolute inset-x-0 bottom-6 px-3 text-center z-10 transition-all group-hover:translate-y-[-2px]">
+            <span className="text-white text-xs font-semibold tracking-wide drop-shadow-md">
+              Assistir Depoimento
+            </span>
+          </div>
+
+          {/* Glassmorphic Glowing Play Button Pill */}
+          <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-white shadow-2xl transition-all duration-300 group-hover:scale-110 group-hover:bg-[#4EA8DE] group-hover:border-[#4EA8DE] z-10">
+            <Play className="w-6 h-6 fill-current ml-0.5" />
+          </div>
+        </div>
+      ) : (
+        // Playable Content Wrapper
+        <>
+          {!useFallback ? (
+            <video
+              ref={videoRef}
+              key={videoPath}
+              src={videoPath}
+              title={name}
+              className="absolute inset-0 w-full h-full object-cover"
+              autoPlay
+              controls
+              playsInline
+              onError={() => {
+                console.warn(`Local video not found at ${videoPath}, falling back to YouTube.`);
+                setUseFallback(true);
+              }}
+            />
+          ) : (
+            // YouTube Iframe Embed. Mounted inside a click handler, the browser allows instant unmuted audio playback (mute=0 & autoplay=1).
+            <div className="absolute inset-0 w-full h-full">
+              <iframe
+                key={videoPath}
+                src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&controls=1&modestbranding=1&rel=0&iv_load_policy=3&playsinline=1`}
+                title={name}
+                className="absolute inset-0 w-full h-full border-0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+          )}
+        </>
+      )}
     </div>
   );
 }
@@ -190,8 +239,6 @@ export default function Testimonials() {
                         videoPath={current.videoPath || ''} 
                         name={current.name} 
                       />
-                      {/* Transparent overlay blocker to prevent pointer interaction (no click to YouTube, no hover trigger) */}
-                      <div className="absolute inset-0 z-20 bg-transparent" />
                     </div>
                   </div>
 

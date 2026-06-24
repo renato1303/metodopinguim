@@ -139,7 +139,7 @@ export default function BookDetailModal({ isOpen, onClose }: BookDetailModalProp
                 </div>
 
                 <p className="text-xs text-gray-500 font-sans leading-relaxed">
-                  Este livro é o resultado de 15 anos de pesquisa clínica de Walace Freiman e foi elaborado para que qualquer pai, mesmo leigo em tecnologia e neurociência, possa blindar e reestabelecer o afeto e rituais familiares pacíficos em sua residência.
+                  Este livro é o resultado de anos de estudos práticos e mentoria familiar de Walace Freiman e foi elaborado para que qualquer pai, mesmo leigo em tecnologia e neurociência, possa blindar e reestabelecer o afeto e rituais familiares pacíficos em sua residência.
                 </p>
 
                 {/* Chapter outline widget list */}

@@ -253,7 +253,7 @@ export default function SchoolSection() {
                   </p>
                   
                   <p className="text-xs text-gray-500 font-sans leading-relaxed max-w-sm mx-auto mb-6">
-                    Agradecemos seu interesse, <strong>{role}</strong> da instituição <strong>{schoolName}</strong>. Um dos nossos especialistas de neuropsicologia entrará em contato via e-mail ou WhatsApp no prazo máximo de 24 horas para agendar sua palestra ou apresentação personalizada!
+                    Agradecemos seu interesse, <strong>{role}</strong> da instituição <strong>{schoolName}</strong>. Um dos nossos especialistas pedagógicos entrará em contato via e-mail ou WhatsApp no prazo máximo de 24 horas para agendar sua palestra ou apresentação personalizada!
                   </p>
 
                   <button

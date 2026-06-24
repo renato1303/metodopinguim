@@ -21,8 +21,8 @@ export default function CommunitySection() {
 
   const communityPerks = [
     {
-      title: 'Suporte Clínico Diário',
-      desc: 'Tire suas dúvidas técnicas ou de relacionamento diretamente com Walace Freiman e uma equipe voluntária especialista em psicologia de comportamento juvenil.',
+      title: 'Suporte e Mentoria Diária',
+      desc: 'Tire suas dúvidas e receba orientação de relacionamento diretamente com Walace Freiman e uma equipe voluntária de mentores familiares e educadores.',
       icon: Users
     },
     {

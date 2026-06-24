@@ -6,10 +6,10 @@ export default function AboutFounder() {
   const [showFullStory, setShowFullStory] = useState(false);
 
   const stats = [
-    { label: 'Formação Acadêmica', value: 'Neuropsicologia Infantil e do Desenvolvimento', icon: BookOpen },
-    { label: 'Experiência Profissional', value: 'Psicólogo Clínico Infantojuvenil', icon: User },
-    { label: 'Anos de Atuação', value: '+12 Anos de Experiência Clínica', icon: Calendar },
-    { label: 'Projetos Realizados', value: 'Criador do Método Pinguim & Autor', icon: Award }
+    { label: 'Formação', value: 'Teologia e Pós-Graduação em Psicopedagogia', icon: BookOpen },
+    { label: 'Atuação', value: 'Empresário, Escritor e Mentor Familiar', icon: User },
+    { label: 'Experiência', value: 'Pai, Educador e Criador do Método Pinguim', icon: Calendar },
+    { label: 'Projetos', value: 'Autor do livro Salvando Meu Filho das Telas! e Criador do Método Pinguim', icon: Award }
   ];
 
   return (
@@ -19,10 +19,10 @@ export default function AboutFounder() {
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#FFD166]/5 rounded-tr-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
           {/* Column for Portrait (41.6% space) */}
-          <div className="lg:col-span-5 flex justify-center">
+          <div className="lg:col-span-5 flex justify-center lg:pt-14">
             <div className="relative w-full max-w-sm">
               {/* Outer soft shadow block */}
               <div className="absolute -inset-2 bg-gradient-to-tr from-[#0D3B66]/10 to-[#4EA8DE]/10 rounded-3xl blur-md pointer-events-none" />
@@ -68,21 +68,36 @@ export default function AboutFounder() {
             </h2>
 
             <div className="space-y-4 font-sans text-gray-600 leading-relaxed mb-8">
-              <p>
-                Como psicólogo clínico e especialista em neuropsicologia do desenvolvimento, eu via diariamente em meu consultório uma mudança alarmante: crianças cada vez mais isoladas, irritadas, ansiosas e com sérios problemas de concentração e regulação emocional.
-              </p>
-              <p className="font-bold text-[#0D3B66]">
-                Nossa Missão:
+              <p className="text-lg font-semibold text-[#0D3B66]">
+                Olá, eu sou Walace de Brito Freiman.
               </p>
               <p>
-                Dar aos pais um caminho estruturado, humano e sem extremismo tecnológico para guiar seus filhos nesta avalanche digital. Inspirados no modelo de paternidade cooperativa dos pinguins na vida selvagem, ajudamos famílias a fechar as fendas, restabelecer rotinas pacíficas e resgatar o afeto no dia a dia.
+                Empresário, escritor, teólogo e pós-graduado em Psicopedagogia. Sou esposo da Luciana, pai do Benjamin e criador do Método Pinguim.
               </p>
               <p>
-                Hoje, o <strong>Método Pinguim</strong> conta com uma metodologia científica validada clinicamente que já transformou e protegeu mais de 50 mil lares em todo o país, provando que é possível equilibrar a tecnologia com o afeto real.
+                Minha jornada começou em casa ao perceber as dificuldades das famílias modernas em manter a conexão e o diálogo. Compreendi que o excesso de telas é apenas o sintoma de algo mais profundo: rotinas fragilizadas, falta de presença e dificuldades de comunicação.
               </p>
+              <p>
+                Dessa experiência nasceu o Método Pinguim, uma metodologia criada para ajudar pais a reorganizarem o lar, estabelecerem limites saudáveis e resgatarem o tempo de qualidade em família, provando que nenhuma tecnologia substitui o afeto real.
+              </p>
+              <p className="font-semibold text-[#0D3B66]">
+                Minha missão é ajudar famílias a restaurarem aquilo que realmente transforma uma casa: relacionamento, limites saudáveis e amor presente.
+              </p>
+
+              <div className="mt-6 pt-6 border-t border-gray-100">
+                <h4 className="font-black text-xl text-[#0D3B66] mb-3">
+                  Nossa Missão
+                </h4>
+                <p className="mb-3">
+                  Ajudar famílias a reconstruírem a conexão entre pais e filhos por meio da presença intencional, da criação de rotinas equilibradas e do fortalecimento dos vínculos afetivos.
+                </p>
+                <p>
+                  Mais do que controlar as telas, ajudamos a reconstruir a cultura do lar, proporcionando um ambiente propício para o desenvolvimento saudável e emocional das crianças.
+                </p>
+              </div>
             </div>
 
-            {/* Micro details grid containing Formação, Experiência, Anos, Projetos */}
+            {/* Micro details grid containing Formação, Atuação, Experiência, Projetos */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               {stats.map((stat, i) => (
                 <div key={i} className="flex items-start space-x-3.5 p-4 rounded-2xl bg-[#F7F9FC] border border-gray-100 hover:border-[#4EA8DE]/20 transition-all duration-300">
@@ -147,23 +162,23 @@ export default function AboutFounder() {
 
               <div className="space-y-4 font-sans text-gray-600 text-sm leading-relaxed">
                 <p>
-                  Tudo começou em 2018. Eu observava meu filho de quatro anos paralisado em frente a um desenho infantil no tablet. O olhar dele estava completamente vago. Ao puxar o aparelho para jantarmos, a reação foi um grito de angústia feroz, quase assustador. Como psicólogo, meu sinal de alerta tocou imediatamente: <strong>isso não era uma birra comum, era abstinência neurológica.</strong>
+                  Tudo começou em 2018. Eu observava meu filho de quatro anos paralisado em frente a um desenho infantil no tablet. O olhar dele estava completamente vago. Ao puxar o aparelho para jantarmos, a reação foi um grito de angústia feroz, quase assustador. Como pai atento, meu sinal de alerta tocou imediatamente: <strong>isso não era uma birra comum, era o reflexo de um hábito que precisava de reestruturação profunda.</strong>
                 </p>
                 <p>
-                  Comecei a mapear o design de comportamento criado pelas redes sociais e jogos. Cientistas cognitivos bilionários trabalham 24 horas por dia para tornar os aparelhos irresistíveis. Pais comuns, exaustos de suas rotinas de trabalho, não têm chance de vencer essa guerra se lutarem sozinhos ou sem um plano estratégico.
+                  Comecei a estudar o design de comportamento e o funcionamento das dinâmicas familiares. Entendi que o excesso de telas raramente é o problema principal, mas o reflexo de rotinas fragilizadas e falta de limites claros. Pais exaustos não têm culpa, mas precisam de um plano de ação prático e restaurador.
                 </p>
                 <p>
-                  Minha missão se tornou clara: simplificar as melhores táticas de cibersegurança, terapia infantil e regulação doméstica em um guia intuitivo e compreensível. O método foi inicialmente testado em dez famílias de amigos próximos, depois em escolas locais, e logo se transformou em um movimento que conta hoje com mais de 50 mil lares transformados.
+                  Minha missão se tornou clara: simplificar as melhores táticas de regulação doméstica, psicopedagogia prática e rotina em um guia intuitivo e acessível para qualquer família. O método foi inicialmente testado em dez famílias de amigos próximos, depois em escolas locais, e logo se transformou em um movimento que conta hoje com mais de 50 mil lares transformados.
                 </p>
                 <p>
-                  Os pinguins protegem seus ovos contra frios congelantes sob forças cooperativas indestrutíveis. Acreditamos que a infância brasileira é o bem mais precioso que temos. Ao retirar o excesso de telas, abrimos espaço para a criatividade lúdica, os heróis da imaginação, o esporte presencial e a paz mental de uma mente verdadeiramente livre para sonhar.
+                  Os pinguins protegem seus ovos contra frios congelantes sob forças cooperativas indestrutíveis. Acreditamos que a infância e os laços familiares são os bens mais preciosos que temos. Ao restabelecer a rotina e o afeto real, devolvemos às crianças o direito de viver uma infância de verdade e aos pais a alegria de liderar o próprio lar com amor e propósito.
                 </p>
 
                 <div className="p-4 bg-[#F7F9FC] border-l-4 border-[#4EA8DE] rounded-r-xl mt-6">
                   <h5 className="font-bold text-[#0D3B66] mb-1 text-sm">Nossos Três Compromissos Formais:</h5>
                   <ul className="list-disc leading-relaxed pl-5 space-y-1 text-xs">
-                    <li><strong>Sem Constrangimento:</strong> Não julgamos as famílias por erros do passado; oferecemos rotas de recomeço.</li>
-                    <li><strong>Fatos Científicos:</strong> Nossas lições são pautadas em pediatria e neuropsicologia moderna, livres de purismos.</li>
+                    <li><strong>Sem Constrangimento:</strong> Não julgamos as famílias por erros do passado; oferecemos rotas de acolhimento e recomeço.</li>
+                    <li><strong>Prática e Valores:</strong> Nossas lições são pautadas em psicopedagogia prática, limites saudáveis e no fortalecimento de vínculos afetivos.</li>
                     <li><strong>Ação Imediata:</strong> Cada conteúdo nosso propõe uma transformação física prática que você vê na janta de hoje.</li>
                   </ul>
                 </div>

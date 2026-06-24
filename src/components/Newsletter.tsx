@@ -31,7 +31,7 @@ export default function Newsletter() {
             </h3>
 
             <p className="text-sm text-gray-500 font-sans leading-relaxed max-w-lg mx-auto mb-8">
-              Toda terça-feira, enviamos um resumo prático contendo novos perigos das redes sociais, atualizações de jogos e acordos domésticos testados por fonoaudiólogos e psicólogos para implementar no seu lar.
+              Toda terça-feira, enviamos um resumo prático contendo novos perigos das redes sociais, atualizações de jogos e acordos domésticos testados por especialistas pedagógicos e mentores familiares para implementar no seu lar.
             </p>
 
             {!success ? (

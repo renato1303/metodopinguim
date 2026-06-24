@@ -65,7 +65,7 @@ export default function FreeResources() {
             Ferramentas Gratuitas Para Pais
           </h2>
           <p className="text-base sm:text-lg text-gray-600 font-sans font-light leading-relaxed">
-            Tenha acesso instantâneo a modelos de acordos, manuais e listas práticos criados por psicólogos para implementar rotinas de desintoxicação digital em casa hoje.
+            Tenha acesso instantâneo a modelos de acordos, manuais e listas práticos criados por educadores e mentores familiares para implementar rotinas de desintoxicação digital em casa hoje.
           </p>
         </div>
 
