@@ -117,7 +117,10 @@ export default function AppAnalyzer() {
   };
 
   return (
-    <section id="aplicativos" className="py-24 bg-white relative">
+    <section id="aplicativos" className="py-24 bg-gradient-to-b from-white via-[#F5F8FA] to-white relative overflow-hidden">
+      {/* Decorative ambient background glowing orbs */}
+      <div className="absolute top-10 left-[-5%] w-80 h-80 bg-[#4EA8DE]/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-10 right-[-5%] w-80 h-80 bg-[#FFD166]/5 rounded-full blur-3xl pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Block */}

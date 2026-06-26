@@ -95,11 +95,26 @@ export default function InteractiveQuiz() {
   const currentQuestion = QUIZ_QUESTIONS[currentQuestionIndex];
 
   return (
-    <section id="quiz-teste" className="py-24 bg-gradient-to-b from-[#F7F9FC] to-white relative">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="quiz-teste" className="py-32 bg-gradient-to-b from-[#0B1A30] via-[#050C1A] to-[#040C1A] text-white relative overflow-hidden">
+      {/* Top slope to transition from White Section (AgeJourneys) to Dark Blue Section (InteractiveQuiz) */}
+      <div className="absolute top-0 left-0 right-0 w-full overflow-hidden leading-[0] z-10 pointer-events-none">
+        <svg className="relative block w-full h-[50px] sm:h-[80px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,0 L1200,0 L0,100 Z" className="fill-white"></path>
+        </svg>
+      </div>
+
+      {/* Decorative ambient background glowing orbs */}
+      <div className="absolute top-1/4 right-[-10%] w-[45rem] h-[45rem] bg-[#FFD166]/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 left-[-10%] w-[45rem] h-[45rem] bg-[#4EA8DE]/10 rounded-full blur-3xl pointer-events-none animate-pulse" />
+
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 my-8">
         
-        {/* Card Frame wrapper */}
-        <div className="bg-white rounded-3xl shadow-xl border border-gray-150 overflow-hidden min-h-[500px] flex flex-col justify-between">
+        {/* Card Frame wrapper with glowing backdrop border effect */}
+        <div className="relative group/quiz">
+          {/* Glowing gradient aura backdrop */}
+          <div className="absolute -inset-1 sm:-inset-1.5 bg-gradient-to-tr from-[#4EA8DE]/20 to-[#FFD166]/20 rounded-[2.2rem] blur-xl opacity-80 group-hover/quiz:opacity-100 transition duration-1000 group-hover/quiz:duration-200 pointer-events-none" />
+          
+          <div className="relative bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden min-h-[500px] flex flex-col justify-between">
           
           <AnimatePresence mode="wait">
             
@@ -365,6 +380,14 @@ export default function InteractiveQuiz() {
 
           </AnimatePresence>
         </div>
+        </div>
+      </div>
+
+      {/* Bottom slope to transition from Dark Blue (InteractiveQuiz) to White Section (AppAnalyzer) */}
+      <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-10 pointer-events-none">
+        <svg className="relative block w-full h-[50px] sm:h-[80px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,20 L1200,120 L0,120 Z" className="fill-white"></path>
+        </svg>
       </div>
     </section>
   );

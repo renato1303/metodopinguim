@@ -187,37 +187,47 @@ export default function Testimonials() {
   const current = MIXED_TESTIMONIALS[activeIndex];
 
   return (
-    <section id="depoimentos" className="py-24 bg-[#F7F9FC] relative overflow-hidden">
+    <section id="depoimentos" className="py-32 bg-gradient-to-b from-[#0B1A30] via-[#050C1A] to-[#040C1A] text-white relative overflow-hidden">
+      {/* Top slope to transition from White Section (SchoolSection) to Dark Blue Section (Testimonials) */}
+      <div className="absolute top-0 left-0 right-0 w-full overflow-hidden leading-[0] z-10 pointer-events-none">
+        <svg className="relative block w-full h-[50px] sm:h-[80px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,0 L1200,100 L1200,0 Z" className="fill-white"></path>
+        </svg>
+      </div>
+
+      {/* Decorative ambient background glowing orbs */}
+      <div className="absolute top-10 left-[-5%] w-80 h-80 bg-[#4EA8DE]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-10 right-[-5%] w-80 h-80 bg-[#FFD166]/5 rounded-full blur-3xl pointer-events-none" />
       {/* Decorative quotes graphic pattern background */}
-      <div className="absolute right-10 bottom-10 text-gray-200/50 text-[180px] font-serif leading-none select-none pointer-events-none hidden md:block">
+      <div className="absolute right-10 bottom-10 text-gray-500/10 text-[180px] font-serif leading-none select-none pointer-events-none hidden md:block">
         ”
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 my-8">
         
         {/* Header Block with Rating */}
         <div className="text-center mb-12">
-          <span className="text-xs font-mono font-bold text-[#4EA8DE] uppercase tracking-widest mb-3 flex items-center justify-center gap-1.5 animate-pulse">
+          <span className="text-xs font-mono font-bold text-amber-300 uppercase tracking-widest mb-3 flex items-center justify-center gap-1.5 animate-pulse">
             <Heart className="w-4 h-4 text-rose-500 fill-rose-500" /> RESGATE DE HARMONIA FAMILIAR
           </span>
-          <h2 className="text-3xl sm:text-4xl font-sans font-black text-[#0D3B66] tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl font-sans font-black text-white tracking-tight mb-4">
             O que dizem os pais e educadores
           </h2>
 
           {/* Average rating star score */}
-          <div className="flex justify-center items-center gap-1.5 mt-4 bg-white border border-gray-150 rounded-full px-5 py-2 w-fit mx-auto shadow-sm">
-            <div className="flex gap-0.5 text-[#FFD166]">
+          <div className="flex justify-center items-center gap-1.5 mt-4 bg-[#132845]/70 border border-white/5 rounded-full px-5 py-2 w-fit mx-auto shadow-md">
+            <div className="flex gap-0.5 text-amber-300">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-4 h-4 fill-current shrink-0" />
               ))}
             </div>
-            <span className="text-xs font-bold text-[#0D3B66] font-mono">Nota de Satisfação Geral: 5.0 / 5.0</span>
+            <span className="text-xs font-bold text-white font-mono">Nota de Satisfação Geral: 5.0 / 5.0</span>
           </div>
         </div>
 
         {/* Carousel Slide Card Frame */}
-        <div className="relative min-h-[480px] bg-white border border-gray-150 p-6 sm:p-10 rounded-3xl shadow-xl flex flex-col justify-between">
-          <Quote className="w-10 h-10 text-[#4EA8DE]/15 absolute top-6 left-6" />
+        <div className="relative min-h-[480px] bg-[#0f213b]/70 border border-white/5 p-6 sm:p-10 rounded-3xl shadow-2xl flex flex-col justify-between backdrop-blur-md">
+          <Quote className="w-10 h-10 text-[#4EA8DE]/10 absolute top-6 left-6" />
 
           <AnimatePresence mode="wait">
             <motion.div
@@ -226,14 +236,14 @@ export default function Testimonials() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.3 }}
-              className="w-full h-full py-4"
+              className="w-full h-full py-4 animate-fade-in"
             >
               {current.type === 'video' ? (
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 items-center">
                   
                   {/* Left Column: Vertical Video / YouTube Shorts Frame */}
                   <div className="col-span-1 md:col-span-5 flex justify-center">
-                    <div className="w-full max-w-[200px] sm:max-w-[220px] aspect-[9/16] bg-black rounded-2xl overflow-hidden border-2 border-[#4EA8DE]/20 shadow-2xl relative">
+                    <div className="w-full max-w-[200px] sm:max-w-[220px] aspect-[9/16] bg-black rounded-2xl overflow-hidden border-2 border-[#4EA8DE]/30 shadow-2xl relative">
                       <TestimonialVideo 
                         videoId={current.videoId || ''} 
                         videoPath={current.videoPath || ''} 
@@ -244,20 +254,20 @@ export default function Testimonials() {
 
                   {/* Right Column: Descriptions & Identity */}
                   <div className="col-span-1 md:col-span-7 flex flex-col justify-center text-center md:text-left space-y-5">
-                    <div className="inline-flex items-center gap-1.5 w-fit mx-auto md:mx-0 px-3 py-1 bg-[#4EA8DE]/10 text-[#4EA8DE] text-xs font-mono font-bold rounded-full uppercase tracking-wider">
+                    <div className="inline-flex items-center gap-1.5 w-fit mx-auto md:mx-0 px-3 py-1 bg-[#4EA8DE]/10 text-amber-300 text-xs font-mono font-bold rounded-full uppercase tracking-wider">
                       <Play className="w-3.5 h-3.5 fill-current" /> Depoimento em Vídeo
                     </div>
                     
-                    <h3 className="text-xl sm:text-2xl font-sans font-black text-[#0D3B66] leading-tight">
+                    <h3 className="text-xl sm:text-2xl font-sans font-black text-white leading-tight">
                       "Veja como o método trouxe leveza para o nosso lar"
                     </h3>
                     
-                    <p className="text-sm sm:text-base text-gray-650 font-sans italic leading-relaxed">
+                    <p className="text-sm sm:text-base text-gray-300 font-sans italic leading-relaxed">
                       {current.description} Assista ao vídeo ao lado para acompanhar o relato completo e as estratégias aplicadas que transformaram nossa dinâmica diária de telas.
                     </p>
                     
-                    <div className="pt-2 border-t border-gray-100 flex flex-col items-center md:items-start">
-                      <h4 className="font-sans font-extrabold text-[#0D3B66] text-base leading-none">
+                    <div className="pt-3 border-t border-white/10 flex flex-col items-center md:items-start">
+                      <h4 className="font-sans font-extrabold text-white text-base leading-none">
                         {current.name}
                       </h4>
                       <p className="text-xs text-[#4EA8DE] font-semibold mt-1.5 leading-none font-sans">
@@ -273,14 +283,14 @@ export default function Testimonials() {
               ) : (
                 <div className="flex flex-col justify-between items-center space-y-8 min-h-[340px]">
                   {/* Quote bubble text */}
-                  <p className="text-base sm:text-lg text-gray-650 font-sans italic leading-relaxed text-center max-w-2xl mx-auto pt-6">
+                  <p className="text-base sm:text-lg text-gray-300 font-sans italic leading-relaxed text-center max-w-2xl mx-auto pt-6">
                     "{current.text}"
                   </p>
 
                   {/* Author signature detail row */}
                   <div className="flex flex-col items-center text-center pt-4">
                     {current.avatar && current.avatar.startsWith('/') ? (
-                      <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-[#4EA8DE]/15 shadow-md mb-3 shrink-0 bg-[#F7F9FC]">
+                      <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-[#4EA8DE]/30 shadow-md mb-3 shrink-0 bg-[#0d213b]">
                         <img
                           src={current.avatar}
                           alt={current.name}
@@ -289,12 +299,12 @@ export default function Testimonials() {
                         />
                       </div>
                     ) : (
-                      <span className="w-12 h-12 bg-[#0D3B66]/5 rounded-full flex items-center justify-center text-2xl shadow-inner mb-3">
+                      <span className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-2xl shadow-inner mb-3">
                         💬
                       </span>
                     )}
 
-                    <h4 className="font-sans font-extrabold text-[#0D3B66] text-base leading-none">
+                    <h4 className="font-sans font-extrabold text-white text-base leading-none">
                       {current.name}
                     </h4>
                     <p className="text-xs text-[#4EA8DE] font-semibold mt-1.5 leading-none font-sans">
@@ -310,7 +320,7 @@ export default function Testimonials() {
           </AnimatePresence>
 
           {/* Carousel Arrows and controllers navigation */}
-          <div className="flex items-center justify-between border-t border-gray-100 pt-6 mt-8">
+          <div className="flex items-center justify-between border-t border-white/10 pt-6 mt-8">
             {/* Dots Tracker */}
             <div className="flex gap-2 flex-wrap max-w-[60%] sm:max-w-none">
               {MIXED_TESTIMONIALS.map((_, idx) => (
@@ -319,7 +329,7 @@ export default function Testimonials() {
                   id={`testimony-dot-${idx}`}
                   onClick={() => setActiveIndex(idx)}
                   className={`h-2 rounded-full cursor-pointer transition-all duration-300 ${
-                    activeIndex === idx ? 'w-6 bg-[#0D3B66]' : 'w-2 bg-gray-250'
+                    activeIndex === idx ? 'w-6 bg-amber-300' : 'w-2 bg-gray-600'
                   }`}
                   aria-label={`Ir para depoimento ${idx + 1}`}
                 />
@@ -331,7 +341,7 @@ export default function Testimonials() {
               <button
                 id="prev-testimony-btn"
                 onClick={handlePrev}
-                className="p-2.5 rounded-full border border-gray-205 hover:bg-gray-150 hover:text-[#0D3B66] text-gray-500 transition-colors cursor-pointer"
+                className="p-2.5 rounded-full border border-white/10 bg-white/5 text-gray-300 hover:bg-white/15 hover:text-white transition-colors cursor-pointer"
                 aria-label="Depoimento Anterior"
               >
                 <ChevronLeft className="w-5 h-5 shrink-0" />
@@ -339,7 +349,7 @@ export default function Testimonials() {
               <button
                 id="next-testimony-btn"
                 onClick={handleNext}
-                className="p-2.5 rounded-full border border-gray-205 hover:bg-gray-150 hover:text-[#0D3B66] text-gray-500 transition-colors cursor-pointer"
+                className="p-2.5 rounded-full border border-white/10 bg-white/5 text-gray-300 hover:bg-white/15 hover:text-white transition-colors cursor-pointer"
                 aria-label="Seguinte Depoimento"
               >
                 <ChevronRight className="w-5 h-5 shrink-0" />
@@ -348,6 +358,13 @@ export default function Testimonials() {
           </div>
         </div>
 
+      </div>
+
+      {/* Bottom slope to transition from Dark Blue (Testimonials) to Dark Blue Section (CommunitySection) */}
+      <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-10 pointer-events-none">
+        <svg className="relative block w-full h-[50px] sm:h-[80px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,20 L1200,120 L0,120 Z" className="fill-[#0D3B66]"></path>
+        </svg>
       </div>
     </section>
   );

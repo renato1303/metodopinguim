@@ -51,14 +51,16 @@ export default function FreeResources() {
   };
 
   return (
-    <section id="recursos-gratuitos" className="py-24 bg-[#F7F9FC] relative">
-      <div className="absolute inset-0 bg-[#0D3B66]/[0.02] pointer-events-none" />
+    <section id="recursos-gratuitos" className="py-24 bg-gradient-to-b from-white via-[#EEF4FA] to-white relative overflow-hidden">
+      {/* Decorative ambient background glowing orbs */}
+      <div className="absolute top-1/4 right-[-5%] w-96 h-96 bg-[#4EA8DE]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 left-[-5%] w-96 h-96 bg-[#FFD166]/10 rounded-full blur-3xl pointer-events-none animate-pulse" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Block */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-mono font-bold text-[#4EA8DE] uppercase tracking-widest mb-2 flex items-center justify-center gap-1.5ClassName">
+          <span className="text-xs font-mono font-bold text-[#4EA8DE] uppercase tracking-widest mb-2 flex items-center justify-center gap-1.5">
             MATERIAIS COMPLEMENTARES
           </span>
           <h2 className="text-3xl sm:text-4xl font-sans font-black text-[#0D3B66] tracking-tight mb-4 animate-fade-in">

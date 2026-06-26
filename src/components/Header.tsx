@@ -41,9 +41,9 @@ export default function Header({ onNavigate, announcementActive = false }: Heade
   return (
     <header
       id="header-navigation"
-      className={`fixed left-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed left-0 w-full z-50 transition-all duration-300 border-t-4 border-[#FFD166] ${
         isScrolled
-          ? 'bg-[#0D3B66]/95 backdrop-blur-md shadow-md py-3'
+          ? 'bg-[#050D1E]/95 backdrop-blur-md shadow-md py-3'
           : 'bg-transparent py-5'
       }`}
       style={{
@@ -107,7 +107,7 @@ export default function Header({ onNavigate, announcementActive = false }: Heade
 
       {/* Mobile Menu Panel */}
       {isOpen && (
-        <div id="mobile-menu-panel" className="lg:hidden bg-[#0D3B66]/98 backdrop-blur-lg border-t border-white/10">
+        <div id="mobile-menu-panel" className="lg:hidden bg-[#050D1E]/98 backdrop-blur-lg border-t border-white/10">
           <div className="px-2 pt-2 pb-4 space-y-1 sm:px-3">
             {menuItems.map((item) => (
               <button

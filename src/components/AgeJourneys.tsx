@@ -25,7 +25,10 @@ export default function AgeJourneys() {
   };
 
   return (
-    <section id="guias" className="py-24 bg-white relative overflow-hidden">
+    <section id="guias" className="py-24 bg-gradient-to-b from-[#E5EFF8] via-white to-white relative overflow-hidden">
+      {/* Decorative ambient background glowing orbs */}
+      <div className="absolute top-10 right-[-5%] w-96 h-96 bg-[#4EA8DE]/5 rounded-full blur-3xl pointer-events-none" />
+      
       {/* Decorative timeline mesh background layer */}
       <div className="absolute top-1/2 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#4EA8DE]/30 to-transparent hidden lg:block -translate-y-1/2 pointer-events-none" />
 

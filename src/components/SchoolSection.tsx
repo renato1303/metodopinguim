@@ -50,10 +50,10 @@ export default function SchoolSection() {
   ];
 
   return (
-    <section id="contatos-escola" className="py-24 bg-white relative overflow-hidden">
+    <section id="contatos-escola" className="py-24 bg-gradient-to-b from-white via-[#F2F6FA] to-white relative overflow-hidden">
       {/* Decorative vector assets */}
-      <div className="absolute top-10 left-10 w-48 h-48 bg-[#4EA8DE]/5 rounded-full blur-2xl pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-48 h-48 bg-[#FFD166]/10 rounded-full blur-2xl pointer-events-none" />
+      <div className="absolute top-10 left-10 w-64 h-64 bg-[#4EA8DE]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-64 h-64 bg-[#FFD166]/15 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">

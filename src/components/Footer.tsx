@@ -13,7 +13,7 @@ export default function Footer({ onNavigate, onOpenAdmin }: FooterProps) {
   };
 
   return (
-    <footer id="footer-navigation" className="bg-[#0D3B66] text-white pt-20 pb-10 border-t border-white/10 relative overflow-hidden">
+    <footer id="footer-navigation" className="bg-[#050D1E] text-white pt-20 pb-10 border-t-4 border-[#FFD166] relative overflow-hidden">
       <div className="absolute inset-0 bg-[#4EA8DE]/[0.02] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

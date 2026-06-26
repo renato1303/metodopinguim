@@ -9,26 +9,17 @@ export default function Hero({ onNavigate }: HeroProps) {
   return (
     <section
       id="hero"
-      className="relative min-h-screen bg-gradient-to-b from-[#0D3B66] via-[#0E497C] to-[#114B7E] pt-32 pb-20 flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen bg-gradient-to-b from-[#050D1E] via-[#0B1A30] to-[#0E2545] pt-32 pb-36 sm:pb-44 lg:pb-48 flex items-center justify-center overflow-hidden"
     >
       {/* Decorative ambient background glowing orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#4EA8DE]/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#FFD166]/5 rounded-full blur-3xl" />
+      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#4EA8DE]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-[#FFD166]/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Text content Column */}
-          <div className="lg:col-span-7 flex flex-col justify-center text-center lg:text-left">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-subtle px-4 py-1.5 rounded-full text-[#FFD166] text-xs font-semibold self-center lg:self-start mb-6 border border-white/10"
-            >
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>MÉTODO COMPROVADO DE EDUCAÇÃO DIGITAL</span>
-            </motion.div>
+          <div className="lg:col-span-7 flex flex-col justify-center text-center lg:text-left mt-4">
 
             <motion.h1
               initial={{ opacity: 0, y: 25 }}
@@ -37,8 +28,8 @@ export default function Hero({ onNavigate }: HeroProps) {
               className="text-4xl sm:text-5xl lg:text-6xl font-sans font-black text-white leading-tight tracking-tight mb-6"
             >
               Seu filho tem apenas uma infância. <br className="hidden sm:inline" />
-              <span className="text-[#FFD166] underline decoration-wavy decoration-[#4EA8DE] underline-offset-8">
-                Não entregue ela para uma tela.
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD166] via-amber-200 to-[#FFD166] relative inline-block mt-1">
+                Não a entregue para as telas.
               </span>
             </motion.h1>
 
@@ -46,7 +37,7 @@ export default function Hero({ onNavigate }: HeroProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-base sm:text-lg lg:text-xl text-gray-200 font-sans font-light max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed"
+              className="text-base sm:text-lg lg:text-xl text-gray-200/90 font-sans font-light max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed"
             >
               O Método Pinguim ajuda famílias a reconstruírem a conexão entre pais e filhos, fortalecendo rotinas, limites saudáveis e momentos de convivência que transformam o lar.
             </motion.p>
@@ -70,7 +61,7 @@ export default function Hero({ onNavigate }: HeroProps) {
               <button
                 id="hero-cta-learn"
                 onClick={() => onNavigate('metodo')}
-                className="w-full sm:w-auto bg-white/10 hover:bg-white/15 text-white font-semibold text-base px-8 py-4 rounded-xl border border-white/20 flex items-center justify-center space-x-2 transition-all duration-200 cursor-pointer"
+                className="w-full sm:w-auto bg-white/5 hover:bg-white/10 text-white font-semibold text-base px-8 py-4 rounded-xl border border-white/20 flex items-center justify-center space-x-2 transition-all duration-200 cursor-pointer"
               >
                 <span>Conhecer o Método</span>
                 <ArrowRight className="w-4 h-4" />
@@ -107,13 +98,13 @@ export default function Hero({ onNavigate }: HeroProps) {
             className="lg:col-span-5 relative flex justify-center"
           >
             <div className="relative w-full max-w-md lg:max-w-none">
-              {/* Decorative polaroid look */}
-              <div className="absolute -inset-1.5 bg-gradient-to-r from-[#4EA8DE] to-[#FFD166] rounded-2xl blur opacity-30 shadow-2xl" />
-              <div className="relative bg-white p-3 rounded-2xl shadow-2xl overflow-hidden aspect-video lg:aspect-square flex items-center justify-center">
+              {/* Decorative polaroid look with a refined dual-glow ring */}
+              <div className="absolute -inset-1.5 bg-gradient-to-r from-[#4EA8DE]/40 via-[#FFD166]/20 to-[#4EA8DE]/40 rounded-3xl blur opacity-45 shadow-2xl" />
+              <div className="relative bg-[#0d213b] p-3 rounded-3xl shadow-2xl overflow-hidden aspect-video lg:aspect-square flex items-center justify-center border border-white/10">
                 <img
                   src="/src/assets/images/hero_family_real_1781136397642.png"
                   alt="Família brasileira alegre unida conversando e rindo sem celulares"
-                  className="w-full h-full object-cover rounded-xl"
+                  className="w-full h-full object-cover rounded-2xl"
                   referrerPolicy="no-referrer"
                 />
               </div>
@@ -121,6 +112,13 @@ export default function Hero({ onNavigate }: HeroProps) {
           </motion.div>
 
         </div>
+      </div>
+
+      {/* Sleek diagonal slope divider that transitions from Hero to White background of AboutFounder */}
+      <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-10 pointer-events-none">
+        <svg className="relative block w-full h-[50px] sm:h-[80px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,120 L1200,20 L1200,120 Z" className="fill-white"></path>
+        </svg>
       </div>
     </section>
   );

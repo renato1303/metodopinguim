@@ -43,7 +43,7 @@ export default function CommunitySection() {
   ];
 
   return (
-    <section id="comunidade" className="py-24 bg-[#0D3B66] relative overflow-hidden text-white">
+    <section id="comunidade" className="pt-24 pb-36 sm:pb-44 bg-[#0D3B66] relative overflow-hidden text-white">
       {/* Visual background style orbs */}
       <div className="absolute top-1/2 left-1/2 w-[550px] h-[550px] bg-[#4EA8DE]/15 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
 
@@ -100,6 +100,13 @@ export default function CommunitySection() {
           </span>
         </div>
 
+      </div>
+
+      {/* Bottom slope to transition from Dark Blue (CommunitySection) to White Section (BlogSection) */}
+      <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-10 pointer-events-none">
+        <svg className="relative block w-full h-[50px] sm:h-[80px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,20 L1200,120 L0,120 Z" className="fill-white"></path>
+        </svg>
       </div>
 
       {/* Invitations details modal popup */}

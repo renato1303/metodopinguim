@@ -44,20 +44,31 @@ export default function MethodPillars() {
   const activePillar = PILLARS.find((p) => p.id === activePillarId);
 
   return (
-    <section id="metodo" className="py-24 bg-[#F7F9FC] relative">
-      <div className="absolute inset-0 bg-[radial-gradient(#4EA8DE_1px,transparent_1px)] [background-size:16px_16px] opacity-[0.15]" />
+    <section id="metodo" className="py-32 bg-gradient-to-b from-[#0B1A30] via-[#071120] to-[#030914] text-white relative overflow-hidden">
+      {/* Top slope to transition from White Section (AboutFounder) to Dark Blue Section (MethodPillars) */}
+      <div className="absolute top-0 left-0 right-0 w-full overflow-hidden leading-[0] z-10 pointer-events-none">
+        <svg className="relative block w-full h-[50px] sm:h-[80px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,0 L1200,100 L1200,0 Z" className="fill-white"></path>
+        </svg>
+      </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="absolute inset-0 bg-[radial-gradient(#4EA8DE_1px,transparent_1px)] [background-size:16px_16px] opacity-[0.08]" />
+      
+      {/* Decorative ambient background glowing orbs */}
+      <div className="absolute top-1/3 left-[-10%] w-[40rem] h-[40rem] bg-[#4EA8DE]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 right-[-10%] w-[40rem] h-[40rem] bg-[#FFD166]/5 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 my-8">
         
         {/* Header Block */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-mono font-bold text-[#4EA8DE] uppercase tracking-widest mb-2 flex items-center justify-center gap-1.5ClassName">
+          <span className="text-xs font-mono font-bold text-amber-300 uppercase tracking-widest mb-3 flex items-center justify-center gap-1.5">
             OS PILARES DE CONEXÃO
           </span>
-          <h2 className="text-3xl sm:text-4xl font-sans font-black text-[#0D3B66] tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl font-sans font-black text-white tracking-tight mb-4">
             O Método Pinguim
           </h2>
-          <p className="text-base sm:text-lg text-gray-600 font-sans font-light max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-300 font-sans font-light max-w-2xl mx-auto leading-relaxed">
             Um caminho estruturado e seguro para criar crianças mais presentes, cooperativas e infinitamente menos dependentes da dopamina artificial das telas.
           </p>
         </div>
@@ -74,7 +85,7 @@ export default function MethodPillars() {
                 id={`pillar-card-${pillar.id}`}
                 whileHover={{ y: -8, scale: 1.02 }}
                 onClick={() => setActivePillarId(pillar.id)}
-                className="bg-white rounded-3xl border border-gray-150 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col h-[420px] group"
+                className="bg-[#0f213b]/70 rounded-3xl border border-white/5 overflow-hidden shadow-lg hover:shadow-2xl hover:border-[#4EA8DE]/30 transition-all duration-300 cursor-pointer flex flex-col h-[420px] group backdrop-blur-md"
               >
                 {/* Image Top Section */}
                 <div className="relative h-52 overflow-hidden shrink-0">
@@ -84,27 +95,27 @@ export default function MethodPillars() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     referrerPolicy="no-referrer"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#050D1E] via-black/20 to-transparent" />
 
                   {/* Floating Pilar Badge */}
-                  <div className="absolute top-4 right-4 text-[9px] font-mono font-bold text-white bg-[#0D3B66]/85 border border-white/10 px-2 py-0.5 rounded-md uppercase tracking-wider">
+                  <div className="absolute top-4 right-4 text-[9px] font-mono font-bold text-white bg-[#4EA8DE]/90 border border-white/10 px-2 py-0.5 rounded-md uppercase tracking-wider backdrop-blur-xs">
                     Pilar 0{pillar.id}
                   </div>
                 </div>
 
                 {/* Content Area */}
-                <div className="p-4 flex-1 flex flex-col justify-between bg-[#F7F9FC]/20">
+                <div className="p-4 flex-1 flex flex-col justify-between bg-transparent">
                   <div>
-                    <h3 className="font-sans font-extrabold text-[#0D3B66] text-base mb-1.5 tracking-tight group-hover:text-[#4EA8DE] transition-colors leading-snug">
+                    <h3 className="font-sans font-extrabold text-white text-base mb-1.5 tracking-tight group-hover:text-amber-300 transition-colors leading-snug">
                       {pillar.title}
                     </h3>
-                    <p className="text-xs text-gray-550 font-sans leading-relaxed line-clamp-3">
+                    <p className="text-xs text-gray-300 font-sans leading-relaxed line-clamp-4">
                       {pillar.description}
                     </p>
                   </div>
 
                   {/* Bottom CTA within card */}
-                  <span className="inline-flex items-center text-xs font-bold text-[#4EA8DE] mt-3 select-none hover:underline">
+                  <span className="inline-flex items-center text-xs font-bold text-amber-300 group-hover:text-amber-200 mt-3 select-none">
                     <span>Saber mais</span>
                     <ChevronRight className="w-3.5 h-3.5 ml-0.5 transition-transform group-hover:translate-x-0.5" />
                   </span>
@@ -115,10 +126,11 @@ export default function MethodPillars() {
         </div>
 
         {/* Informative Banner */}
-        <div className="mt-16 bg-gradient-to-r from-[#0D3B66] to-[#0E497C] p-6 lg:p-8 rounded-2xl text-white shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div className="max-w-2xl text-center sm:text-left">
-            <h4 className="font-sans font-extrabold text-[#FFD166] text-lg mb-2">Preocupado com o diagnóstico virtual?</h4>
-            <p className="text-sm text-gray-200 font-sans font-light leading-relaxed">
+        <div className="mt-16 bg-gradient-to-r from-[#11243e] to-[#081324] p-6 lg:p-8 rounded-2xl text-white shadow-xl border border-white/5 flex flex-col sm:flex-row items-center justify-between gap-6 relative overflow-hidden group/banner">
+          <div className="absolute -inset-10 bg-[radial-gradient(#4EA8DE_1px,transparent_1px)] opacity-[0.05] pointer-events-none" />
+          <div className="max-w-2xl text-center sm:text-left relative z-10">
+            <h4 className="font-sans font-extrabold text-amber-300 text-lg mb-2">Preocupado com o diagnóstico virtual?</h4>
+            <p className="text-sm text-gray-300 font-sans font-light leading-relaxed">
               Muitos pais tentam cortar o uso das mídias sem criar as regras corretas de reconexão doméstica. Faça nosso Quiz de Capacitação Gratuito e receba as soluções de acordo com o nível da sua família!
             </p>
           </div>
@@ -128,11 +140,18 @@ export default function MethodPillars() {
               const el = document.getElementById('quiz-teste');
               el?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="whitespace-nowrap px-6 py-3 bg-[#FFD166] hover:bg-[#FFD166]/90 text-[#0D3B66] font-bold text-sm rounded-xl transition-all shadow-md transform hover:-translate-y-0.5 shrink-0 cursor-pointer"
+            className="relative z-10 whitespace-nowrap px-6 py-3 bg-[#FFD166] hover:bg-[#FFD166]/90 text-[#0D3B66] font-bold text-sm rounded-xl transition-all shadow-md transform hover:-translate-y-0.5 shrink-0 cursor-pointer"
           >
             Começar Diagnóstico
           </button>
         </div>
+      </div>
+
+      {/* Bottom slope to transition from Dark Blue (MethodPillars) to White Section (AgeJourneys) */}
+      <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-10 pointer-events-none">
+        <svg className="relative block w-full h-[50px] sm:h-[80px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,20 L1200,120 L0,120 Z" className="fill-[#E5EFF8]"></path>
+        </svg>
       </div>
 
       {/* Pillar Full Detail Modal Popup */}
@@ -140,7 +159,7 @@ export default function MethodPillars() {
         {activePillarId !== null && activePillar && (
           <div
             id="pillar-modal-overlay"
-            className="fixed inset-0 bg-[#0D3B66]/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-[#030914]/90 backdrop-blur-md z-50 flex items-center justify-center p-4"
           >
             <motion.div
               initial={{ scale: 0.95, opacity: 0 }}
