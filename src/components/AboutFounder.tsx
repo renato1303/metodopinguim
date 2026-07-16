@@ -75,24 +75,24 @@ export default function AboutFounder() {
                 Empresário, escritor, teólogo e pós-graduado em Psicopedagogia. Sou esposo da Luciana, pai do Benjamin e criador do Método Pinguim.
               </p>
               <p>
-                Minha jornada começou em casa ao perceber as dificuldades das famílias modernas em manter a conexão e o diálogo. Compreendi que o excesso de telas é apenas o sintoma de algo mais profundo: rotinas fragilizadas, falta de presença e dificuldades de comunicação.
+                Quando meu filho tinha oito anos, percebi as telas ocupando cada vez mais espaço em nossa casa. O tempo em família diminuía e momentos simples de convivência eram substituídos pelo digital. Vi ali que precisávamos, urgentemente, recuperar nossa conexão familiar.
+              </p>
+              <p className="border-l-4 border-[#4EA8DE] pl-4 italic my-4 text-gray-700">
+                "Como restaurar a conexão familiar e devolver aos nossos filhos aquilo que nenhuma tela pode oferecer: presença, vínculo e pertencimento?"
               </p>
               <p>
-                Dessa experiência nasceu o Método Pinguim, uma metodologia criada para ajudar pais a reorganizarem o lar, estabelecerem limites saudáveis e resgatarem o tempo de qualidade em família, provando que nenhuma tecnologia substitui o afeto real.
+                Essa pergunta me levou a estudar comportamento infantil, psicopedagogia e dinâmica familiar. Entendi que as telas raramente são o problema: na verdade, elas são o sintoma de lares cansados e de vínculos que precisam de cuidado.
               </p>
-              <p className="font-semibold text-[#0D3B66]">
-                Minha missão é ajudar famílias a restaurarem aquilo que realmente transforma uma casa: relacionamento, limites saudáveis e amor presente.
+              <p>
+                Escrevi o livro <strong className="text-[#0D3B66]">"Salvando Meu Filho das Telas!"</strong> para compartilhar o que aprendi e apliquei na minha própria casa. O que começou como uma preocupação de pai transformou-se na missão do <strong className="text-[#0D3B66]">Método Pinguim</strong>.
               </p>
 
               <div className="mt-6 pt-6 border-t border-gray-100">
                 <h4 className="font-black text-xl text-[#0D3B66] mb-3">
                   Nossa Missão
                 </h4>
-                <p className="mb-3">
-                  Ajudar famílias a reconstruírem a conexão entre pais e filhos por meio da presença intencional, da criação de rotinas equilibradas e do fortalecimento dos vínculos afetivos.
-                </p>
-                <p>
-                  Mais do que controlar as telas, ajudamos a reconstruir a cultura do lar, proporcionando um ambiente propício para o desenvolvimento saudável e emocional das crianças.
+                <p className="font-semibold text-[#0D3B66] leading-relaxed">
+                  Ajudar pais a resgatarem seus filhos e a reconstruírem lares saudáveis, onde a tecnologia tenha seu devido lugar, mas nunca ocupe o espaço sagrado da família.
                 </p>
               </div>
             </div>
@@ -111,15 +111,6 @@ export default function AboutFounder() {
                 </div>
               ))}
             </div>
-
-            <button
-              id="founder-story-toggle"
-              onClick={() => setShowFullStory(true)}
-              className="px-6 py-3 bg-[#0D3B66] hover:bg-[#0D3B66]/90 text-white font-bold text-sm rounded-xl transition-all inline-flex items-center space-x-2 shadow-md w-fit cursor-pointer"
-            >
-              <Sparkles className="w-4 h-4 text-[#FFD166]" />
-              <span>Conheça Nossa História Completa</span>
-            </button>
           </div>
 
         </div>
@@ -162,26 +153,35 @@ export default function AboutFounder() {
 
               <div className="space-y-4 font-sans text-gray-600 text-sm leading-relaxed">
                 <p>
-                  Tudo começou em 2018. Eu observava meu filho de quatro anos paralisado em frente a um desenho infantil no tablet. O olhar dele estava completamente vago. Ao puxar o aparelho para jantarmos, a reação foi um grito de angústia feroz, quase assustador. Como pai atento, meu sinal de alerta tocou imediatamente: <strong>isso não era uma birra comum, era o reflexo de um hábito que precisava de reestruturação profunda.</strong>
+                  Meu filho tinha oito anos de idade quando comecei a perceber mudanças que me preocupavam. Aos poucos, as telas estavam ocupando um espaço cada vez maior dentro da nossa casa. O tempo em família diminuía, as conversas eram interrompidas e momentos simples de convivência estavam sendo substituídos pelo entretenimento digital.
                 </p>
                 <p>
-                  Comecei a estudar o design de comportamento e o funcionamento das dinâmicas familiares. Entendi que o excesso de telas raramente é o problema principal, mas o reflexo de rotinas fragilizadas e falta de limites claros. Pais exaustos não têm culpa, mas precisam de um plano de ação prático e restaurador.
+                  Um dia, ao observá-lo completamente envolvido em uma tela, percebi algo que mexeu profundamente comigo. Não era apenas uma questão de tecnologia. O que eu estava vendo era o reflexo de algo maior: nossa família, como tantas outras, precisava recuperar intencionalmente seus momentos de conexão.
+                </p>
+                <p className="font-bold text-[#0D3B66] text-base border-l-4 border-[#FFD166] pl-4 italic my-4 py-1">
+                  Como restaurar a conexão familiar e devolver aos nossos filhos aquilo que nenhuma tela pode oferecer: presença, vínculo e pertencimento?
                 </p>
                 <p>
-                  Minha missão se tornou clara: simplificar as melhores táticas de regulação doméstica, psicopedagogia prática e rotina em um guia intuitivo e acessível para qualquer família. O método foi inicialmente testado em dez famílias de amigos próximos, depois em escolas locais, e logo se transformou em um movimento que conta hoje com mais de 300 lares transformados.
+                  Essa pergunta me levou a uma jornada profunda de estudos sobre comportamento infantil, psicopedagogia, desenvolvimento humano, dinâmica familiar e os impactos do uso excessivo das telas.
                 </p>
                 <p>
-                  Os pinguins protegem seus ovos contra frios congelantes sob forças cooperativas indestrutíveis. Acreditamos que a infância e os laços familiares são os bens mais preciosos que temos. Ao restabelecer a rotina e o afeto real, devolvemos às crianças o direito de viver uma infância de verdade e aos pais a alegria de liderar o próprio lar com amor e propósito.
+                  Ao longo desse caminho, compreendi uma verdade transformadora: <strong>as telas raramente são o problema principal.</strong> Na maioria das vezes, elas são apenas o sintoma de lares cansados, rotinas desorganizadas e relacionamentos que precisam ser restaurados.
                 </p>
-
-                <div className="p-4 bg-[#F7F9FC] border-l-4 border-[#4EA8DE] rounded-r-xl mt-6">
-                  <h5 className="font-bold text-[#0D3B66] mb-1 text-sm">Nossos Três Compromissos Formais:</h5>
-                  <ul className="list-disc leading-relaxed pl-5 space-y-1 text-xs">
-                    <li><strong>Sem Constrangimento:</strong> Não julgamos as famílias por erros do passado; oferecemos rotas de acolhimento e recomeço.</li>
-                    <li><strong>Prática e Valores:</strong> Nossas lições são pautadas em psicopedagogia prática, limites saudáveis e no fortalecimento de vínculos afetivos.</li>
-                    <li><strong>Ação Imediata:</strong> Cada conteúdo nosso propõe uma transformação física prática que você vê na janta de hoje.</li>
-                  </ul>
-                </div>
+                <p>
+                  Também entendi que os pais não precisam de culpa ou condenação. Eles precisam de direção, ferramentas práticas e esperança.
+                </p>
+                <p>
+                  Foi então que comecei a escrever o livro <strong>"Salvando Meu Filho das Telas!"</strong>, reunindo tudo o que estava aprendendo e aplicando dentro da minha própria casa. O que começou como uma preocupação de pai transformou-se em uma missão de vida.
+                </p>
+                <p>
+                  Dessa experiência nasceu também o <strong>Método Pinguim</strong>, um projeto criado para ajudar famílias a reorganizarem seus lares, fortalecerem seus vínculos e recuperarem o que realmente importa: a presença, o diálogo e a convivência.
+                </p>
+                <p className="font-bold text-[#0D3B66] text-base border-l-4 border-[#4EA8DE] pl-4 italic my-4 py-1">
+                  Nossa missão é simples, mas profunda: ajudar pais a resgatarem seus filhos e a reconstruírem lares mais saudáveis, onde a tecnologia tenha o seu lugar, mas nunca ocupe o lugar da família.
+                </p>
+                <p>
+                  Porque, no final, não estamos lutando contra as telas. Estamos lutando pelas nossas famílias, pelos nossos filhos e pelas memórias que merecem ser vividas juntos.
+                </p>
               </div>
 
               <div className="mt-8 pt-4 border-t border-gray-100 flex justify-end">

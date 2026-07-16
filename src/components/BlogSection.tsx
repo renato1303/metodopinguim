@@ -6,9 +6,10 @@ import { BlogPost } from '../types.ts';
 
 interface BlogSectionProps {
   onOpenBook?: () => void;
+  onReadPost?: (post: BlogPost) => void;
 }
 
-export default function BlogSection({ onOpenBook }: BlogSectionProps) {
+export default function BlogSection({ onOpenBook, onReadPost }: BlogSectionProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [readingPost, setReadingPost] = useState<BlogPost | null>(null);
   const [newsEmail, setNewsEmail] = useState('');
@@ -171,7 +172,13 @@ export default function BlogSection({ onOpenBook }: BlogSectionProps) {
                   key={post.id}
                   id={`blog-entry-${post.id}`}
                   whileHover={{ y: -3 }}
-                  onClick={() => setReadingPost(post)}
+                  onClick={() => {
+                    if (onReadPost) {
+                      onReadPost(post);
+                    } else {
+                      setReadingPost(post);
+                    }
+                  }}
                   className="p-5 bg-[#F7F9FC] border border-gray-100 rounded-2xl hover:bg-white hover:border-[#4EA8DE]/20 hover:shadow-md transition-all duration-300 grid grid-cols-1 md:grid-cols-12 gap-6 cursor-pointer group"
                 >
                   {/* Photographic Cover / Emoji Block */}

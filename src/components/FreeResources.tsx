@@ -36,15 +36,26 @@ export default function FreeResources() {
   const triggerRawFileMockDownload = () => {
     if (!downloadingResource) return;
 
-    // Create virtual download file for premium client feel
-    const element = document.createElement('a');
-    const fileContent = `--- MÉTODO PINGUIM --- \nDocumento: ${downloadingResource.title}\nTipo: ${downloadingResource.type}\n\nRECURSO COMPLETO:\n${downloadingResource.contentPreview}\n\nParabéns por proteger o seu lar! Este arquivo simulado faz parte do ambiente institucional completo do Método Pinguim.`;
-    const file = new Blob([fileContent], { type: 'text/plain' });
-    element.href = URL.createObjectURL(file);
-    element.download = downloadingResource.fileName.replace('.pdf', '.txt');
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
+    if (downloadingResource.pdfUrl) {
+      // Trigger actual PDF file download or open link
+      const element = document.createElement('a');
+      element.href = downloadingResource.pdfUrl;
+      element.target = '_blank';
+      element.download = downloadingResource.fileName;
+      document.body.appendChild(element);
+      element.click();
+      document.body.removeChild(element);
+    } else {
+      // Create virtual download file for premium client feel
+      const element = document.createElement('a');
+      const fileContent = `--- MÉTODO PINGUIM --- \nDocumento: ${downloadingResource.title}\nTipo: ${downloadingResource.type}\n\nRECURSO COMPLETO:\n${downloadingResource.contentPreview}\n\nParabéns por proteger o seu lar! Este arquivo simulado faz parte do ambiente institucional completo do Método Pinguim.`;
+      const file = new Blob([fileContent], { type: 'text/plain' });
+      element.href = URL.createObjectURL(file);
+      element.download = downloadingResource.fileName.replace('.pdf', '.txt');
+      document.body.appendChild(element);
+      element.click();
+      document.body.removeChild(element);
+    }
     
     // Close modal
     setDownloadingResource(null);

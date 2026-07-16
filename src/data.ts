@@ -458,7 +458,8 @@ export const FREE_RESOURCES: FreeResource[] = [
     description: 'Instruções passo a passo ilustradas para blindar os roteadores, celulares iOS/Android, Smart TVs e videogames da sua residência contra pornografia e predadores.',
     fileName: 'metodo_pinguim_manual_controle_parental.pdf',
     type: 'Guia em PDF (42 páginas)',
-    contentPreview: 'Este e-book prático foi desenhado para pais não-técnicos. Veja o passo a passo para: \n1. Configurar DNS familiar seguro (Cloudflare 1.1.1.3);\n2. Definir limites na App Store e Google Play;\n3. Ativar o Modo de Segurança com PIN administrativo nos roteadores das operadoras.'
+    contentPreview: 'Este e-book prático foi desenhado para pais não-técnicos. Veja o passo a passo para: \n1. Configurar DNS familiar seguro (Cloudflare 1.1.1.3);\n2. Definir limites na App Store e Google Play;\n3. Ativar o Modo de Segurança com PIN administrativo nos roteadores das operadoras.',
+    pdfUrl: '' // Exemplo: '/metodo_pinguim_manual_controle_parental.pdf' ou link externo do Google Drive/Dropbox
   },
   {
     id: 'checklist',
@@ -466,7 +467,8 @@ export const FREE_RESOURCES: FreeResource[] = [
     description: 'Uma lista visual de hábitos saudáveis diários e semanais para colar na geladeira e organizar os compromissos digitais e offline da família.',
     fileName: 'metodo_pinguim_checklist_da_geladeira.pdf',
     type: 'Checklist Prático para Imprimir',
-    contentPreview: 'Acompanhe as metas das crianças toda semana:\n- Dever de casa e tarefas concluídas antes de telas?\n- 1 hora de exercícios físicos batida?\n- Celular carregado fora do quarto antes de dormir?\nCompartilhe as estrelas de conformidade!'
+    contentPreview: 'Acompanhe as metas das crianças toda semana:\n- Dever de casa e tarefas concluídas antes de telas?\n- 1 hora de exercícios físicos batida?\n- Celular carregado fora do quarto antes de dormir?\nCompartilhe as estrelas de conformidade!',
+    pdfUrl: '' // Exemplo: '/metodo_pinguim_checklist_da_geladeira.pdf' ou link externo
   },
   {
     id: 'contrato',
@@ -474,7 +476,8 @@ export const FREE_RESOURCES: FreeResource[] = [
     description: 'Um termo de acordo com regras claras de convivência, limites acordados e consequências estipuladas. Assinado por pais e filhos.',
     fileName: 'metodo_pinguim_contrato_digital_familiar.pdf',
     type: 'Contrato Editável em PDF',
-    contentPreview: 'Eu, [Nome do Filho], me comprometo a:\n1. Nunca camuflar o histórico de navegação;\n2. Manter o celular desligado após as 21h;\n3. Entregar as senhas de segurança aos meus pais sempre que solicitado para fins médicos.\nEu, [Nome do Pai/Mãe], me comprometo a guiar com respeito...'
+    contentPreview: 'Eu, [Nome do Filho], me comprometo a:\n1. Nunca camuflar o histórico de navegação;\n2. Manter o celular desligado após as 21h;\n3. Entregar as senhas de segurança aos meus pais sempre que solicitado para fins médicos.\nEu, [Nome do Pai/Mãe], me comprometo a guiar com respeito...',
+    pdfUrl: '' // Exemplo: '/metodo_pinguim_contrato_digital_familiar.pdf' ou link externo
   },
   {
     id: 'plano',
@@ -482,7 +485,8 @@ export const FREE_RESOURCES: FreeResource[] = [
     description: 'Um roteiro detalhado com 50 sugestões práticas de lazer real, passeios offline de baixíssimo custo e brincadeiras lúdicas para vencer o marasmo.',
     fileName: 'metodo_pinguim_roteiro_offline_familiar.pdf',
     type: 'Guia de Atividades com 50 Ideias',
-    contentPreview: 'Crie conexão verdadeira de final de semana:\n- Caça ao tesouro doméstica temática;\n- Tarde de culinária (fazendo pizza do zero);\n- Acampamento na sala com lençóis;\n- Noite de jogos de tabuleiro antigos e divertidos.'
+    contentPreview: 'Crie conexão verdadeira de final de semana:\n- Caça ao tesouro doméstica temática;\n- Tarde de culinária (fazendo pizza do zero);\n- Acampamento na sala com lençóis;\n- Noite de jogos de tabuleiro antigos e divertidos.',
+    pdfUrl: '' // Exemplo: '/metodo_pinguim_roteiro_offline_familiar.pdf' ou link externo
   },
   {
     id: 'ebook',
@@ -490,7 +494,8 @@ export const FREE_RESOURCES: FreeResource[] = [
     description: 'Entenda os truques psicológicos criados pelas empresas das redes sociais para reter seu filho e como contorná-los com ciência.',
     fileName: 'metodo_pinguim_segredos_neurociencia.pdf',
     type: 'Mini Ebook Técnico e Humanizado',
-    contentPreview: 'Aprenda sobre o loop de feedback de dopamina variável que alimenta o feed infinito. Como as cores saturadas, vídeos com áudios em alta velocidade e likes falsos ativam o centro de recompensa da criança, exigindo desintoxicação metódica.'
+    contentPreview: 'Aprenda sobre o loop de feedback de dopamina variável que alimenta o feed infinito. Como as cores saturadas, vídeos com áudios em alta velocidade e likes falsos ativam o centro de recompensa da criança, exigindo desintoxicação metódica.',
+    pdfUrl: '' // Exemplo: '/metodo_pinguim_segredos_neurociencia.pdf' ou link externo
   }
 ];
 

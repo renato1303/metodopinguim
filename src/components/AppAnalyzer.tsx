@@ -12,8 +12,8 @@ export default function AppAnalyzer() {
     switch (id) {
       case 'tiktok':
         return (
-          <div className={`${containerClass} bg-neutral-950 text-cyan-400 flex items-center justify-center shadow-md shrink-0 border border-neutral-900`}>
-            <Music className={`${iconClass} text-fuchsia-400`} />
+          <div className={`${containerClass} overflow-hidden shadow-md shrink-0 border border-neutral-100 bg-white`}>
+            <img src="/src/assets/images/logotiktok.png" alt="TikTok" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
           </div>
         );
       case 'instagram':
@@ -24,32 +24,32 @@ export default function AppAnalyzer() {
         );
       case 'youtube':
         return (
-          <div className={`${containerClass} bg-red-650 text-white flex items-center justify-center shadow-md shrink-0 border border-red-700`}>
-            <Youtube className={iconClass} />
+          <div className={`${containerClass} overflow-hidden shadow-md shrink-0 border border-neutral-100 bg-white`}>
+            <img src="/src/assets/images/logoyoutube.png" alt="YouTube" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
           </div>
         );
       case 'whatsapp':
         return (
-          <div className={`${containerClass} bg-emerald-600 text-white flex items-center justify-center shadow-md shrink-0 border border-emerald-700`}>
-            <MessageSquare className={iconClass} />
+          <div className={`${containerClass} overflow-hidden shadow-md shrink-0 border border-neutral-100 bg-white`}>
+            <img src="/src/assets/images/logowhatsapp.png" alt="WhatsApp" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
           </div>
         );
       case 'discord':
         return (
-          <div className={`${containerClass} bg-[#5865F2] text-white flex items-center justify-center shadow-md shrink-0`}>
-            <Gamepad2 className={iconClass} />
+          <div className={`${containerClass} overflow-hidden shadow-md shrink-0 border border-neutral-100 bg-white`}>
+            <img src="/src/assets/images/logodiscord.png" alt="Discord" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
           </div>
         );
       case 'roblox':
         return (
-          <div className={`${containerClass} bg-neutral-900 border border-neutral-800 text-red-500 flex items-center justify-center shadow-md shrink-0 font-sans font-black text-lg`}>
-            R
+          <div className={`${containerClass} overflow-hidden shadow-md shrink-0 border border-neutral-100 bg-white`}>
+            <img src="/src/assets/images/logoroblox.png" alt="Roblox" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
           </div>
         );
       case 'minecraft':
         return (
-          <div className={`${containerClass} bg-emerald-800 text-amber-250 flex items-center justify-center shadow-md shrink-0 border border-emerald-900`}>
-            <Hammer className={iconClass} />
+          <div className={`${containerClass} overflow-hidden shadow-md shrink-0 border border-neutral-100 bg-white`}>
+            <img src="/src/assets/images/logominecraft.jpeg" alt="Minecraft" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
           </div>
         );
       case 'chatgpt':

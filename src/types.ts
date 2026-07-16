@@ -49,6 +49,7 @@ export interface FreeResource {
   fileName: string;
   type: string;
   contentPreview: string;
+  pdfUrl?: string;
 }
 
 export interface BlogPost {

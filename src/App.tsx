@@ -18,6 +18,8 @@ import CommunitySection from './components/CommunitySection.tsx';
 import BlogSection from './components/BlogSection.tsx';
 import Newsletter from './components/Newsletter.tsx';
 import Footer from './components/Footer.tsx';
+import { BlogPost } from './types.ts';
+import BlogPostPage from './components/BlogPostPage.tsx';
 
 // High-Fidelity Promotional components import
 import AnnouncementBar from './components/AnnouncementBar.tsx';
@@ -52,6 +54,7 @@ export default function App() {
   const [isAnnouncementVisible, setIsAnnouncementVisible] = useState(true);
   const [isBookModalOpen, setIsBookModalOpen] = useState(false);
   const [isAdminModalOpen, setIsAdminModalOpen] = useState(false);
+  const [activeBlogPost, setActiveBlogPost] = useState<BlogPost | null>(null);
 
   const handleSaveAnnouncement = (newConfig: {
     enabled: boolean;
@@ -67,17 +70,29 @@ export default function App() {
   const isBarActive = announcementConfig.enabled && isAnnouncementVisible;
 
   const handleNavigate = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      // Dynamic offset scroll calculation accounts for dynamic announcement bar visibility
-      const headerOffset = isBarActive ? 138 : 90;
-      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition = elementPosition - headerOffset;
+    if (activeBlogPost) {
+      setActiveBlogPost(null);
+    }
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
+    const executeScroll = () => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        // Dynamic offset scroll calculation accounts for dynamic announcement bar visibility
+        const headerOffset = isBarActive ? 138 : 90;
+        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    };
+
+    if (activeBlogPost) {
+      setTimeout(executeScroll, 100);
+    } else {
+      executeScroll();
     }
   };
 
@@ -103,41 +118,66 @@ export default function App() {
           transition: 'padding-top 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
         }}
       >
-        {/* 2. Outstanding Hero Block */}
-        <Hero onNavigate={handleNavigate} />
+        {activeBlogPost ? (
+          <BlogPostPage
+            post={activeBlogPost}
+            onBackToBlog={() => {
+              setActiveBlogPost(null);
+              setTimeout(() => {
+                handleNavigate('blog');
+              }, 100);
+            }}
+            onReadPost={(post) => {
+              setActiveBlogPost(post);
+              window.scrollTo(0, 0);
+            }}
+            onOpenBook={() => setIsBookModalOpen(true)}
+          />
+        ) : (
+          <>
+            {/* 2. Outstanding Hero Block */}
+            <Hero onNavigate={handleNavigate} />
 
-        {/* 3. About Founder Storyteller Panel */}
-        <AboutFounder />
+            {/* 3. About Founder Storyteller Panel */}
+            <AboutFounder />
 
-        {/* 4. Primary Pedagogical Pillars */}
-        <MethodPillars />
+            {/* 4. Primary Pedagogical Pillars */}
+            <MethodPillars />
 
-        {/* 5. Age Milestone Roadmaps */}
-        <AgeJourneys />
+            {/* 5. Age Milestone Roadmaps */}
+            <AgeJourneys />
 
-        {/* 6. Interactive Capacitation Diagnostic Test */}
-        <InteractiveQuiz />
+            {/* 6. Interactive Capacitation Diagnostic Test */}
+            <InteractiveQuiz />
 
-        {/* 7. App Safety Analyzer Directory */}
-        <AppAnalyzer />
+            {/* 7. App Safety Analyzer Directory */}
+            <AppAnalyzer />
 
-        {/* 8. Free family materials & downloads */}
-        <FreeResources />
+            {/* 8. Free family materials & downloads */}
+            <FreeResources />
 
-        {/* 9. Specialized School Talks Program */}
-        <SchoolSection />
+            {/* 9. Specialized School Talks Program */}
+            <SchoolSection />
 
-        {/* 10. Reviews & Testimonies carousel slider */}
-        <Testimonials />
+            {/* 10. Reviews & Testimonies carousel slider */}
+            <Testimonials />
 
-        {/* 11. Exclusive private group community */}
-        <CommunitySection />
+            {/* 11. Exclusive private group community */}
+            <CommunitySection />
 
-        {/* 12. Blog content indexfeed directory */}
-        <BlogSection onOpenBook={() => setIsBookModalOpen(true)} />
+            {/* 12. Blog content indexfeed directory */}
+            <BlogSection 
+              onOpenBook={() => setIsBookModalOpen(true)} 
+              onReadPost={(post) => {
+                setActiveBlogPost(post);
+                window.scrollTo(0, 0);
+              }}
+            />
 
-        {/* 13. Sleek Newsletter subscription area footer */}
-        <Newsletter />
+            {/* 13. Sleek Newsletter subscription area footer */}
+            <Newsletter />
+          </>
+        )}
       </main>
 
       {/* 14. Responsive footer listings directories */}
