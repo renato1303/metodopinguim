@@ -13,13 +13,13 @@ const MIXED_TESTIMONIALS = [
   },
   {
     type: 'video',
-    videoId: 'HQiTr0aL49s',
-    videoPath: '/videos/depoimento1.mp4',
+    vimeoId: '1212417370',
+    vimeoUrl: 'https://vimeo.com/1212417370?share=copy&fl=sv&fe=ci',
     name: 'Larissa Albuquerque',
     role: 'Mãe do Enzo (7 anos)',
     location: 'Rio de Janeiro - RJ',
     description: 'Transformação real de rotinas e reconexão offline.',
-    avatar: '/src/assets/images/avatar_mom_1_1781136525343.png' // fallbacks if needed, but we draw video custom
+    avatar: '/src/assets/images/avatar_mom_1_1781136525343.png'
   },
   {
     type: 'text',
@@ -31,8 +31,8 @@ const MIXED_TESTIMONIALS = [
   },
   {
     type: 'video',
-    videoId: '3fUireuBDOE',
-    videoPath: '/videos/depoimento2.mp4',
+    vimeoId: '1212417369',
+    vimeoUrl: 'https://vimeo.com/1212417369?share=copy&fl=sv&fe=ci',
     name: 'Henrique Ostrovski',
     role: 'Pai do Davi (6 anos)',
     location: 'Florianópolis - SC',
@@ -49,8 +49,8 @@ const MIXED_TESTIMONIALS = [
   },
   {
     type: 'video',
-    videoId: 'G0kwgwxdnQo',
-    videoPath: '/videos/depoimento3.mp4',
+    vimeoId: '1212417371',
+    vimeoUrl: 'https://vimeo.com/1212417371?share=copy&fl=sv&fe=ci',
     name: 'Camila Peixoto',
     role: 'Mãe da Giovanna (13 anos) e Manuela (9 anos)',
     location: 'Porto Alegre - RS',
@@ -67,8 +67,8 @@ const MIXED_TESTIMONIALS = [
   },
   {
     type: 'video',
-    videoId: 'gflanw_gUPo',
-    videoPath: '/videos/depoimento4.mp4',
+    vimeoId: '1212417368',
+    vimeoUrl: 'https://vimeo.com/1212417368?share=copy&fl=sv&fe=ci',
     name: 'Tiago Silveira',
     role: 'Pai do Pedro (11 anos)',
     location: 'Campinas - SP',
@@ -78,32 +78,21 @@ const MIXED_TESTIMONIALS = [
 ];
 
 interface TestimonialVideoProps {
-  videoId: string;
-  videoPath: string;
+  vimeoId: string;
   name: string;
 }
 
-function TestimonialVideo({ videoId, videoPath, name }: TestimonialVideoProps) {
+function TestimonialVideo({ vimeoId, name }: TestimonialVideoProps) {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [useFallback, setUseFallback] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
 
-  // Reset play and fallback state when the active video change
+  // Reset play state when the active video changes
   useEffect(() => {
     setIsPlaying(false);
-    setUseFallback(false);
-  }, [videoPath]);
+  }, [vimeoId]);
 
   const handlePlayClick = (e: React.MouseEvent) => {
     e.stopPropagation();
     setIsPlaying(true);
-    
-    if (!useFallback && videoRef.current) {
-      videoRef.current.muted = false;
-      videoRef.current.play().catch((err) => {
-        console.warn("HTML5 video playback initiation was blocked:", err);
-      });
-    }
   };
 
   return (
@@ -114,12 +103,15 @@ function TestimonialVideo({ videoId, videoPath, name }: TestimonialVideoProps) {
       {!isPlaying ? (
         // Beautiful, high-fidelity placeholder cover poster with a glowing Play button
         <div className="absolute inset-0 w-full h-full bg-slate-950 flex flex-col items-center justify-center relative">
-          {/* YouTube High Quality Thumbnail as background poster */}
+          {/* Vimeo High Quality Thumbnail as background poster */}
           <img 
-            src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`} 
+            src={`https://vumbnail.com/${vimeoId}.jpg`} 
             alt={name}
             className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500"
             referrerPolicy="no-referrer"
+            onError={(e) => {
+              (e.target as HTMLElement).style.display = 'none';
+            }}
           />
           {/* Rich cinematic overlay gradient */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/30" />
@@ -137,37 +129,17 @@ function TestimonialVideo({ videoId, videoPath, name }: TestimonialVideoProps) {
           </div>
         </div>
       ) : (
-        // Playable Content Wrapper
-        <>
-          {!useFallback ? (
-            <video
-              ref={videoRef}
-              key={videoPath}
-              src={videoPath}
-              title={name}
-              className="absolute inset-0 w-full h-full object-cover"
-              autoPlay
-              controls
-              playsInline
-              onError={() => {
-                console.warn(`Local video not found at ${videoPath}, falling back to YouTube.`);
-                setUseFallback(true);
-              }}
-            />
-          ) : (
-            // YouTube Iframe Embed. Mounted inside a click handler, the browser allows instant unmuted audio playback (mute=0 & autoplay=1).
-            <div className="absolute inset-0 w-full h-full">
-              <iframe
-                key={videoPath}
-                src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&controls=1&modestbranding=1&rel=0&iv_load_policy=3&playsinline=1`}
-                title={name}
-                className="absolute inset-0 w-full h-full border-0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              />
-            </div>
-          )}
-        </>
+        // Vimeo Iframe Embed
+        <div className="absolute inset-0 w-full h-full bg-black">
+          <iframe
+            key={vimeoId}
+            src={`https://player.vimeo.com/video/${vimeoId}?autoplay=1&muted=0&autopause=0&title=0&byline=0&portrait=0`}
+            title={name}
+            className="absolute inset-0 w-full h-full border-0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
       )}
     </div>
   );
@@ -245,8 +217,7 @@ export default function Testimonials() {
                   <div className="col-span-1 md:col-span-5 flex justify-center">
                     <div className="w-full max-w-[200px] sm:max-w-[220px] aspect-[9/16] bg-black rounded-2xl overflow-hidden border-2 border-[#4EA8DE]/30 shadow-2xl relative">
                       <TestimonialVideo 
-                        videoId={current.videoId || ''} 
-                        videoPath={current.videoPath || ''} 
+                        vimeoId={current.vimeoId || ''} 
                         name={current.name} 
                       />
                     </div>
