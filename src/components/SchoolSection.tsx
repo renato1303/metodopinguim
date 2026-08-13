@@ -60,11 +60,6 @@ export default function SchoolSection() {
           
           {/* Text and Benefits Column */}
           <div className="lg:col-span-7">
-            <span className="text-xs font-mono font-bold text-[#4EA8DE] uppercase tracking-widest mb-2 flex items-center gap-1.5">
-              <Landmark className="w-4.5 h-4.5 text-[#4EA8DE]" />
-              Área de Educação Escolar
-            </span>
-            
             <h2 className="text-3xl sm:text-4xl font-sans font-black text-[#0D3B66] leading-tight mb-6">
               Levando Educação Digital Para Escolas
             </h2>

@@ -125,9 +125,6 @@ export default function AppAnalyzer() {
         
         {/* Header Block */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-mono font-bold text-[#4EA8DE] uppercase tracking-widest mb-2 flex items-center justify-center gap-1.5ClassName">
-            BLINDAGEM DIGITAL COMUNÁRIA
-          </span>
           <h2 className="text-3xl sm:text-4xl font-sans font-black text-[#0D3B66] tracking-tight mb-4">
             Análises dos Aplicativos Mais Utilizados
           </h2>

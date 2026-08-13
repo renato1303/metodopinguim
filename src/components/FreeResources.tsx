@@ -71,9 +71,6 @@ export default function FreeResources() {
         
         {/* Header Block */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-mono font-bold text-[#4EA8DE] uppercase tracking-widest mb-2 flex items-center justify-center gap-1.5">
-            MATERIAIS COMPLEMENTARES
-          </span>
           <h2 className="text-3xl sm:text-4xl font-sans font-black text-[#0D3B66] tracking-tight mb-4 animate-fade-in">
             Ferramentas Gratuitas Para Pais
           </h2>

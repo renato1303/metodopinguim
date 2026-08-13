@@ -127,18 +127,15 @@ export default function InteractiveQuiz() {
                 exit={{ opacity: 0, y: -15 }}
                 className="p-8 sm:p-12 text-center flex-1 flex flex-col justify-center items-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-tr from-[#FFD166]/30 to-[#FFD166]/5 rounded-2xl border border-[#FFD166]/40 flex items-center justify-center text-[#0D3B66] mb-6 shadow-sm animate-pulse">
-                  <Target className="w-7 h-7 shrink-0" />
+                <div className="w-16 h-16 bg-gradient-to-tr from-[#FFD166]/30 to-[#FFD166]/5 rounded-2xl border border-[#FFD166]/40 flex items-center justify-center text-[#0D3B66] mb-6 shadow-sm">
+                  <ShieldCheck className="w-7 h-7 shrink-0 text-[#0D3B66]" />
                 </div>
                 
-                <span className="text-xs font-mono font-bold text-[#4EA8DE] uppercase tracking-widest mb-2 block">
-                  Capacitação Gratuita
-                </span>
                 <h3 className="font-sans font-black text-[#0D3B66] text-2xl sm:text-3xl tracking-tight mb-4 max-w-xl">
-                  Sua família está preparada para o mundo digital?
+                  Como resgatar a conexão familiar e tirar seus filhos das telas?
                 </h3>
                 <p className="text-sm text-gray-500 font-sans font-light max-w-lg mb-8 leading-relaxed">
-                  Os algoritmos de redes sociais e jogos foram programados para capturar a mente das crianças. Responda a 10 perguntas intuitivas e receba um diagnóstico detalhado com plano de ação prático do Método Pinguim.
+                  Responda a 10 perguntas rápidas e receba um diagnóstico exclusivo com estratégias práticas para mudar a rotina da sua casa, diminuir os conflitos pelo celular e reaproximar sua família.
                 </p>
 
                 <div className="inline-flex flex-wrap gap-4 items-center justify-center text-xs text-gray-400 mb-8 max-w-md">

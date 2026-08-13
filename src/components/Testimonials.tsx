@@ -15,8 +15,8 @@ const MIXED_TESTIMONIALS = [
     type: 'video',
     vimeoId: '1212417370',
     vimeoUrl: 'https://vimeo.com/1212417370?share=copy&fl=sv&fe=ci',
-    name: 'Larissa Albuquerque',
-    role: 'Mãe do Enzo (7 anos)',
+    name: 'Fernanda',
+    role: 'Mãe da Lara (15 anos)',
     location: 'Rio de Janeiro - RJ',
     description: 'Transformação real de rotinas e reconexão offline.',
     avatar: '/src/assets/images/avatar_mom_1_1781136525343.png'
@@ -33,9 +33,9 @@ const MIXED_TESTIMONIALS = [
     type: 'video',
     vimeoId: '1212417369',
     vimeoUrl: 'https://vimeo.com/1212417369?share=copy&fl=sv&fe=ci',
-    name: 'Henrique Ostrovski',
-    role: 'Pai do Davi (6 anos)',
-    location: 'Florianópolis - SC',
+    name: 'Evanderson de Oliveira',
+    role: 'Pai de 3 filhos',
+    location: 'Rio de Janeiro - RJ',
     description: 'Como implementou limites amorosos e saudáveis nas telas.',
     avatar: '/src/assets/images/avatar_dad_1_1781136536537.png'
   },
@@ -51,11 +51,11 @@ const MIXED_TESTIMONIALS = [
     type: 'video',
     vimeoId: '1212417371',
     vimeoUrl: 'https://vimeo.com/1212417371?share=copy&fl=sv&fe=ci',
-    name: 'Camila Peixoto',
-    role: 'Mãe da Giovanna (13 anos) e Manuela (9 anos)',
-    location: 'Porto Alegre - RS',
+    name: 'Vinícius Agnus',
+    role: 'Pai da Lavinia (6 anos)',
+    location: 'Rio de Janeiro - RJ',
     description: 'O fim das crises diárias por desligamento de telas.',
-    avatar: '/src/assets/images/avatar_mom_1_1781136525343.png'
+    avatar: '/src/assets/images/avatar_dad_1_1781136536537.png'
   },
   {
     type: 'text',
@@ -69,9 +69,9 @@ const MIXED_TESTIMONIALS = [
     type: 'video',
     vimeoId: '1212417368',
     vimeoUrl: 'https://vimeo.com/1212417368?share=copy&fl=sv&fe=ci',
-    name: 'Tiago Silveira',
-    role: 'Pai do Pedro (11 anos)',
-    location: 'Campinas - SP',
+    name: 'Vinícius Cruz',
+    role: 'Pai do Isaac',
+    location: 'Rio de Janeiro - RJ',
     description: 'O impacto positivo e visível do Contrato Familiar na prática.',
     avatar: '/src/assets/images/avatar_dad_2_1781136561327.png'
   }
@@ -177,24 +177,11 @@ export default function Testimonials() {
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 my-8">
         
-        {/* Header Block with Rating */}
+        {/* Header Block */}
         <div className="text-center mb-12">
-          <span className="text-xs font-mono font-bold text-amber-300 uppercase tracking-widest mb-3 flex items-center justify-center gap-1.5 animate-pulse">
-            <Heart className="w-4 h-4 text-rose-500 fill-rose-500" /> RESGATE DE HARMONIA FAMILIAR
-          </span>
           <h2 className="text-3xl sm:text-4xl font-sans font-black text-white tracking-tight mb-4">
             O que dizem os pais e educadores
           </h2>
-
-          {/* Average rating star score */}
-          <div className="flex justify-center items-center gap-1.5 mt-4 bg-[#132845]/70 border border-white/5 rounded-full px-5 py-2 w-fit mx-auto shadow-md">
-            <div className="flex gap-0.5 text-amber-300">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 fill-current shrink-0" />
-              ))}
-            </div>
-            <span className="text-xs font-bold text-white font-mono">Nota de Satisfação Geral: 5.0 / 5.0</span>
-          </div>
         </div>
 
         {/* Carousel Slide Card Frame */}

@@ -23,7 +23,7 @@ export default function Newsletter() {
 
           <div className="max-w-2xl mx-auto text-center">
             <span className="inline-flex items-center gap-1 bg-[#FFD166]/15 text-[#0D3B66] text-[10px] font-mono font-bold px-3 py-1 rounded-full mb-4 shadow-sm">
-              <Sparkles className="w-3.5 h-3.5" /> 100% GRATUITO E SEGURO
+              100%
             </span>
 
             <h3 className="font-sans font-black text-[#0D3B66] text-2xl sm:text-3xl tracking-tight mb-3">

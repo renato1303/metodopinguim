@@ -27,9 +27,9 @@ export default function Hero({ onNavigate }: HeroProps) {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl sm:text-5xl lg:text-6xl font-sans font-black text-white leading-tight tracking-tight mb-6"
             >
-              Seu filho tem apenas uma infância. <br className="hidden sm:inline" />
+              Tire seus filhos das telas <br className="hidden sm:inline" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD166] via-amber-200 to-[#FFD166] relative inline-block mt-1">
-                Não a entregue para as telas.
+                e resgate a conexão familiar.
               </span>
             </motion.h1>
 
@@ -39,7 +39,7 @@ export default function Hero({ onNavigate }: HeroProps) {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-base sm:text-lg lg:text-xl text-gray-200/90 font-sans font-light max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed"
             >
-              O Método Pinguim ajuda famílias a reconstruírem a conexão entre pais e filhos, fortalecendo rotinas, limites saudáveis e momentos de convivência que transformam o lar.
+              O Método Pinguim ajuda pais a mudarem a rotina da sua casa, acabarem com as discussões diárias pelo celular e trazerem a harmonia e a convivência de volta para o seu lar.
             </motion.p>
 
             {/* CTA Buttons */}

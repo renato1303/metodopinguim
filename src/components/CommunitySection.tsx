@@ -51,9 +51,6 @@ export default function CommunitySection() {
         
         {/* Header Block */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-mono font-bold text-[#FFD166] uppercase tracking-widest mb-3 flex items-center justify-center gap-1.5 animate-pulse">
-            <Lock className="w-4 h-4" /> COMPANHEIRISMO EXCLUSIVO
-          </span>
           <h2 className="text-3xl sm:text-4xl font-sans font-black tracking-tight mb-4 text-white">
             Você não está sozinho nessa jornada
           </h2>
